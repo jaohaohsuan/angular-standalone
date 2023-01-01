@@ -26,6 +26,7 @@ specifiers:
   '@nrwl/linter': 15.4.2
   '@nrwl/nx-cloud': latest
   '@nrwl/workspace': 15.4.2
+  '@types/express': ^4.17.15
   '@types/jest': 28.1.1
   '@types/node': 16.11.7
   '@typescript-eslint/eslint-plugin': ^5.36.1
@@ -34,6 +35,7 @@ specifiers:
   eslint: ~8.15.0
   eslint-config-prettier: 8.1.0
   eslint-plugin-cypress: ^2.10.3
+  express: ^4.18.2
   jest: 28.1.1
   jest-environment-jsdom: 28.1.1
   jest-preset-angular: ~12.2.3
@@ -57,7 +59,8 @@ dependencies:
   '@angular/platform-server': 15.0.4_z3opwe3qhjflzh7pjilg7af43a
   '@angular/router': 15.0.4_6qoe6dvkj2mvffppuvjrhovg7y
   '@nguniversal/express-engine': 15.0.0_4bypt6grxjo3kffy2jhzlxtfja
-  '@nrwl/angular': 15.4.2_cdzgq5zselruwuu3j6me2tjzua
+  '@nrwl/angular': 15.4.2_qazrep4a36c7amrxgza7v667aq
+  express: 4.18.2
   rxjs: 7.5.7
   tslib: 2.4.1
   zone.js: 0.11.8
@@ -70,13 +73,14 @@ devDependencies:
   '@angular/cli': 15.0.4
   '@angular/compiler-cli': 15.0.4_ewn2ril7hiljdjavj4fhvjxokq
   '@angular/language-service': 15.0.4
-  '@nguniversal/builders': 15.0.0_lhuvygkemh27dggnvrhv6lzjwq
+  '@nguniversal/builders': 15.0.0_xqr3c7crh7nhjycu7kmqwjxl3m
   '@nrwl/cypress': 15.4.2_35prlv4a7afwacmp5exnw2ghwy
   '@nrwl/eslint-plugin-nx': 15.4.2_4p5my4xkqyjharhcbrurrjm2iu
   '@nrwl/jest': 15.4.2_ujpxluqiza4k5w25pfc4dmcn6m
   '@nrwl/linter': 15.4.2_hauow3q6rgcowujqkcze6zawbe
   '@nrwl/nx-cloud': 15.0.2
   '@nrwl/workspace': 15.4.2_324d72diffomyyym6tiz4paiyq
+  '@types/express': 4.17.15
   '@types/jest': 28.1.1
   '@types/node': 16.11.7
   '@typescript-eslint/eslint-plugin': 5.47.1_oj4ek63zjayokah4qbdeyzt7di
@@ -2182,38 +2186,7 @@ packages:
       typescript: 4.8.4
       webpack: 5.75.0_esbuild@0.15.13
 
-  /@nguniversal/builders/15.0.0_lhuvygkemh27dggnvrhv6lzjwq:
-    resolution: {integrity: sha512-MEgKIhbbut933InHhogoNKSZXh7NigPIWHBFk7P7tSOfdu55nuO4WlR5lcTC7KbkqMmQOAtJP54XLdKS7hhFxg==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
-    peerDependencies:
-      '@angular-devkit/build-angular': ^15.0.0-next.0
-    dependencies:
-      '@angular-devkit/architect': 0.1500.4
-      '@angular-devkit/build-angular': 15.0.4_ugcy24zahbztslffje23ztadhe
-      '@angular-devkit/core': 15.0.4
-      '@nguniversal/common': 15.0.0_wcjhsjedbutghxn65tv34lliyq
-      browser-sync: 2.27.11
-      express: 4.18.2
-      guess-parser: 0.4.22_typescript@4.8.4
-      http-proxy-middleware: 2.0.6
-      ora: 5.4.1
-      piscina: 3.2.0
-      rxjs: 6.6.7
-      tree-kill: 1.2.2
-    transitivePeerDependencies:
-      - '@angular/common'
-      - '@angular/core'
-      - '@types/express'
-      - bufferutil
-      - canvas
-      - chokidar
-      - debug
-      - supports-color
-      - typescript
-      - utf-8-validate
-    dev: true
-
-  /@nguniversal/builders/15.0.0_xp4dxymo7fcvlvq4n33t2qk7ia:
+  /@nguniversal/builders/15.0.0_m63an7jdxy7uqjipxe3e7t2dlq:
     resolution: {integrity: sha512-MEgKIhbbut933InHhogoNKSZXh7NigPIWHBFk7P7tSOfdu55nuO4WlR5lcTC7KbkqMmQOAtJP54XLdKS7hhFxg==}
     engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
     peerDependencies:
@@ -2226,7 +2199,7 @@ packages:
       browser-sync: 2.27.11
       express: 4.18.2
       guess-parser: 0.4.22_typescript@4.8.4
-      http-proxy-middleware: 2.0.6
+      http-proxy-middleware: 2.0.6_@types+express@4.17.15
       ora: 5.4.1
       piscina: 3.2.0
       rxjs: 6.6.7
@@ -2243,6 +2216,37 @@ packages:
       - typescript
       - utf-8-validate
     dev: false
+
+  /@nguniversal/builders/15.0.0_xqr3c7crh7nhjycu7kmqwjxl3m:
+    resolution: {integrity: sha512-MEgKIhbbut933InHhogoNKSZXh7NigPIWHBFk7P7tSOfdu55nuO4WlR5lcTC7KbkqMmQOAtJP54XLdKS7hhFxg==}
+    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+    peerDependencies:
+      '@angular-devkit/build-angular': ^15.0.0-next.0
+    dependencies:
+      '@angular-devkit/architect': 0.1500.4
+      '@angular-devkit/build-angular': 15.0.4_ugcy24zahbztslffje23ztadhe
+      '@angular-devkit/core': 15.0.4
+      '@nguniversal/common': 15.0.0_wcjhsjedbutghxn65tv34lliyq
+      browser-sync: 2.27.11
+      express: 4.18.2
+      guess-parser: 0.4.22_typescript@4.8.4
+      http-proxy-middleware: 2.0.6_@types+express@4.17.15
+      ora: 5.4.1
+      piscina: 3.2.0
+      rxjs: 6.6.7
+      tree-kill: 1.2.2
+    transitivePeerDependencies:
+      - '@angular/common'
+      - '@angular/core'
+      - '@types/express'
+      - bufferutil
+      - canvas
+      - chokidar
+      - debug
+      - supports-color
+      - typescript
+      - utf-8-validate
+    dev: true
 
   /@nguniversal/common/15.0.0_wcjhsjedbutghxn65tv34lliyq:
     resolution: {integrity: sha512-RSlCSS5HejFoH/T6hpRIkTG1JzYEIxRgxsSxVyyPhGGRS4ouBzy4vEVkuIKwiYgVMBIGljJLelb38IsChTJsRg==}
@@ -2377,12 +2381,12 @@ packages:
       - supports-color
     dev: true
 
-  /@nrwl/angular/15.4.2_cdzgq5zselruwuu3j6me2tjzua:
+  /@nrwl/angular/15.4.2_qazrep4a36c7amrxgza7v667aq:
     resolution: {integrity: sha512-O13mU2+p1/Af3fKS9zltbIrnV+1bzvnWnFxW5zu/Hfq7E063TSh0PYyxdytD0T2fMVRZN0t7X5HWCVHDiL98UQ==}
     requiresBuild: true
     dependencies:
       '@angular-devkit/schematics': 15.0.4_chokidar@3.5.3
-      '@nguniversal/builders': 15.0.0_xp4dxymo7fcvlvq4n33t2qk7ia
+      '@nguniversal/builders': 15.0.0_m63an7jdxy7uqjipxe3e7t2dlq
       '@nrwl/cypress': 15.4.2_35prlv4a7afwacmp5exnw2ghwy
       '@nrwl/devkit': 15.4.2_nx@15.4.2+typescript@4.8.4
       '@nrwl/jest': 15.4.2_ujpxluqiza4k5w25pfc4dmcn6m
@@ -6241,23 +6245,6 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
-
-  /http-proxy-middleware/2.0.6:
-    resolution: {integrity: sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      '@types/express': ^4.17.13
-    peerDependenciesMeta:
-      '@types/express':
-        optional: true
-    dependencies:
-      '@types/http-proxy': 1.17.9
-      http-proxy: 1.18.1
-      is-glob: 4.0.3
-      is-plain-obj: 3.0.0
-      micromatch: 4.0.5
-    transitivePeerDependencies:
-      - debug
 
   /http-proxy-middleware/2.0.6_@types+express@4.17.15:
     resolution: {integrity: sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==}
